@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/webpage.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <h5 class="copy2">Morise | Code </h5>
+    <div class="container">
+
+        <label for="Number One">Enter Some Text </label>
+
+        <form method="POST">
+            <input type="text" name="textbox" placeholder="Enter Text Here Or Morise Code" class="form-control"
+                name="num1" />
+            <label for="Operation">Operation</label>
+            <select class="custom-select" id="sel1" name="operation">
+                <option class="lgi" value="add">Encrypt</option>
+                <option class="lgi" value="subtract">Decrypt</option>
+            </select>
+            <button class="btn btn-primary" type="submit" name="submit">Enter</button>
+        </form>
+
+        <div class="sss1">Note :</div><br>
+        <div class="sss"> <span>Encrypt</span> : From Normal Text To Morise Code</div><br>
+        <div class="sss"><span>Decrypt</span> : From Morise Code To Normal Text</div><br>
+
+
+
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('form').submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: '/',
+                    data: $('form').serialize(),
+                    success: function (response) {
+                        $('#resultMessage').text(response.result);
+                        $('#resultModal').modal('show');
+                        $('.modal-content').css({
+                            'background-color': '#333', // Dark mode background color
+                            'color': '#fff' // Light text color
+                        });
+                        $('#resultMessage').css({ 'font-size': '40px', 'color': 'cornflowerblue' }); // Adjust the font size as needed
+                        $('#copyResultBtn').click(function () {
+                            navigator.clipboard.writeText($('#resultMessage').text());
+                            $('#copyResultBtn').text("Copied!");                            
+                        });
+                    },
+                    error: function (error) {
+                        console.log(error);
+                        throw new Error("AJAX request failed");
+                    }
+                });
+            });
+        });
+    </script>
+
+    <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resultModalLabel">Operation Result</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="resultMessage"></p>
+                    <p id="resultMessage" class="result-message"></p>
+                    <button id="copyResultBtn" class="btn btn-primary">Copy Result</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h5 class="copy">Designed | By </h5>
+
+</body>
+
+</html>

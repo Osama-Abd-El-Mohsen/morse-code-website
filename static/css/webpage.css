@@ -1,0 +1,167 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 0rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    background-color: rgb(39, 39, 39);
+    perspective: 600px;
+}
+
+
+.container {
+    margin: 5% auto;
+    margin-bottom: 1%;
+    width: 450px;
+    padding: 2%;
+    background-color: #333;
+    transition: all.2s ease-in-out;
+    border-radius: 16px;
+}
+
+.container:hover {
+    box-shadow: 10px 10px 0px 1px #707070;
+    transform: translateZ(10px);
+}
+
+.form-control,
+
+.alert {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 6px 12px;
+    font-size: 14px;
+    padding: 1rem;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: rgb(70, 70, 70);
+    text-align: center;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    font-size: 18px;
+    border: 1px solid rgb(70, 70, 70);
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    margin: 10px 0px;
+}
+
+.form-control:hover {
+    box-shadow: 0px 0px 0px 1px cornflowerblue,
+    5px 4px 0px rgba(0, 0, 0, 0.15);
+    font-size: 20px;
+
+}
+
+
+
+label {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 2px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+
+
+
+
+.btn {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 30px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    background-color: cornflowerblue;
+    width: 100%;
+    height: 40px;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    font-size: large;
+    margin: 10px 0px;
+    text-align: center;
+
+
+}
+
+
+
+
+.btn:hover {
+    background-color: rgb(83, 124, 201);
+}
+
+.btn:active {
+    background-color: rgb(64, 97, 156)
+}
+
+
+
+
+
+.copy2 {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1%;
+    margin-top: 0%;
+    font-size: medium;
+    font-size: 25px;
+    ;
+    
+}
+
+
+
+
+.sss {
+    color: white;
+
+    font-size: larger;
+    font-family: inherit;
+    font-weight: bold;
+
+}
+
+.sss1 {
+    color: cornflowerblue;
+    font-size: 20px;
+    font-weight: 500;
+    font-weight: bold;
+}
+
+
+span {
+    color: cornflowerblue;
+}
+
+.custom-select {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(70, 70, 70);
+    text-align: center;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    font-size: large;
+    border: 1px solid rgb(70, 70, 70, 20);
+    border-radius: 4px;
+    margin: 10px 0px;
+}
+
+.copy {
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: medium;
+    overflow:hidden;
+    bottom :10;
+}
+
+.copy:after {
+    content: "| Osama Mohamed Abd El_Mohsen | " "©";
+    color: cornflowerblue;
+}
