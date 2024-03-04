@@ -1,7 +1,7 @@
 body {
-    margin: 0 auto;
-    padding: 0;
-    margin-bottom: 0rem;
+    /* margin: 0 auto; */
+    /* padding: 0; */
+    /* margin-bottom: 0rem; */
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     background-color: rgb(39, 39, 39);
@@ -10,17 +10,17 @@ body {
 
 
 .container {
-    margin: 5% auto;
-    margin-bottom: 1%;
-    width: 450px;
+    margin: 10% auto;
+    /* margin-bottom: 1%; */
+    width: 440px;
     padding: 2%;
     background-color: #333;
-    transition: all.2s ease-in-out;
+    transition: all.3s ease-in-out;
     border-radius: 16px;
 }
 
 .container:hover {
-    box-shadow: 10px 10px 0px 1px #707070;
+    box-shadow: 10px 10px 0px 1px #414040;
     transform: translateZ(10px);
 }
 
@@ -66,10 +66,6 @@ label {
 }
 
 
-
-
-
-
 .btn {
     -ms-touch-action: manipulation;
     touch-action: manipulation;
@@ -82,27 +78,21 @@ label {
     width: 100%;
     height: 40px;
     -webkit-text-fill-color: rgb(255, 255, 255);
-    font-size: large;
+    font-size: medium;
     margin: 10px 0px;
-    text-align: center;
-
+    text-align: medium;
+    transition: all.3s ease-in-out;
 
 }
 
-
-
-
 .btn:hover {
     background-color: rgb(83, 124, 201);
+
 }
 
 .btn:active {
     background-color: rgb(64, 97, 156)
 }
-
-
-
-
 
 .copy2 {
     background-color: #333;
@@ -112,16 +102,10 @@ label {
     margin-top: 0%;
     font-size: medium;
     font-size: 25px;
-    ;
-    
 }
-
-
-
 
 .sss {
     color: white;
-
     font-size: larger;
     font-family: inherit;
     font-weight: bold;
@@ -158,7 +142,7 @@ span {
     padding: 2rem;
     font-size: medium;
     overflow:hidden;
-    bottom :10;
+    bottom :0%;
 }
 
 .copy:after {
